@@ -1,5 +1,6 @@
 /*
 Placa: ESP32 Heltec Wireless Stick v3
+Adafruit BME280 Library by Adafruit version 2.2.4
 */
 /////////////////////////////////////////////////////////////////////////////////////
 // Libraries BME280
@@ -61,7 +62,7 @@ void setup() {
   if (!bme.begin(BME_DIR, &I2CBME)) {
     Serial.println("BME280 Not found.");
     while (!bme.begin(BME_DIR, &I2CBME)) {
-      Serial.println("Reintentando...");
+      Serial.println("Retrying...");
       delay(3000);
     }
   } else {
