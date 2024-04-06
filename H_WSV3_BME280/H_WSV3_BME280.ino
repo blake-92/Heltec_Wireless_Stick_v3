@@ -48,6 +48,7 @@ void setup() {
 
   Serial.begin(115200);
 
+  // Initializaing OLED
   VextON();
   delay(100);
   display.init();
