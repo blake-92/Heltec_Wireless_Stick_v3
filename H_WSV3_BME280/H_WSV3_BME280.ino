@@ -3,15 +3,15 @@ Placa: ESP32 Heltec Wireless Stick v3
 Adafruit BME280 Library by Adafruit version 2.2.4
 */
 /////////////////////////////////////////////////////////////////////////////////////
-// Libraries BME280
+// BME280 Libraries
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME280.h>
-// Libraries OLED
+// OLED Libraries
 #include "HT_SSD1306Wire.h"
 
 /////////////////////////////////////////////////////////////////////////////////////
-// Variables BME280
+// BME280 Variables
 #define SEALEVELPRESSURE_HPA (1013.25)
 #define BME_DIR   0x76
 #define I2C_SDA_2 7
@@ -24,10 +24,10 @@ float pressure_bme;
 float altitude2_bme;
 
 /////////////////////////////////////////////////////////////////////////////////////
-// Objects BME280
+// BME280 Objetcs
 TwoWire I2CBME = TwoWire(1);
 Adafruit_BME280 bme;
-// Objects OLED
+// OLED Object
 SSD1306Wire  display(0x3c, 500000, SDA_OLED, SCL_OLED, GEOMETRY_64_32, RST_OLED);
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -46,7 +46,6 @@ void VextOFF(void) //Vext default OFF
 
 /////////////////////////////////////////////////////////////////////////////////////
 void setup() {
-
   Serial.begin(115200);
 
   // Initializaing OLED

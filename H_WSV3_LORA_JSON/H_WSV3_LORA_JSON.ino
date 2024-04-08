@@ -41,13 +41,13 @@ double txNumber;
 bool lora_idle=true;
 
 /////////////////////////////////////////////////////////////////////////////////////
+// LORA Object
+static RadioEvents_t RadioEvents;
 // JSON Object
 JsonDocument doc;
-// Lora Object
-static RadioEvents_t RadioEvents;
 
 /////////////////////////////////////////////////////////////////////////////////////
-// Lora Functions
+// LORA Functions
 void OnTxDone( void );
 void OnTxTimeout( void );
 
