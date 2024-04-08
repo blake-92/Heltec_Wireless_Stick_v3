@@ -104,8 +104,6 @@ static void printData() {
   Serial.print("Altitude = ");
   Serial.print(altitude2_bme);
   Serial.println(" m");
-
-  Serial.println();
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
