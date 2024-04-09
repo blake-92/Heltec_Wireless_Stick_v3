@@ -94,6 +94,10 @@ void setup() {
 	
   txNumber=0;
 
+  // LED
+  pinMode(35, OUTPUT);
+  digitalWrite(35, LOW);
+
   // Initializing OLED
   VextON();
   delay(100);
@@ -149,7 +153,7 @@ void loop()
 {
 	if(lora_idle == true)
 	{
-    delay(30000);
+    smartDelay(60000);
 
     txNumber += 0.01;
 
@@ -171,6 +175,13 @@ void loop()
 		Radio.Send( (uint8_t *)txpacket, strlen(txpacket) );
     lora_idle = false;
 
+    // LED Indicator
+    digitalWrite(35, HIGH);
+    smartDelay(500);
+    digitalWrite(35, LOW);
+    smartDelay(500);
+
+
 	}
   Radio.IrqProcess( );
 }
@@ -187,6 +198,12 @@ void OnTxTimeout( void )
     Radio.Sleep( );
     Serial.println("TX Timeout......");
     lora_idle = true;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////
+static void smartDelay(unsigned long ms) {
+  unsigned long start = millis();
+  while (millis() - start < ms);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
