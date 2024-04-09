@@ -75,14 +75,12 @@ SSD1306Wire  display(0x3c, 500000, SDA_OLED, SCL_OLED, GEOMETRY_64_32, RST_OLED)
 void OnTxDone( void );
 void OnTxTimeout( void );
 // OLED Functions
-void VextON(void)
-{
+void VextON(void) {
   pinMode(Vext,OUTPUT);
   digitalWrite(Vext, LOW);
 }
 
-void VextOFF(void) //Vext default OFF
-{
+void VextOFF(void) {
   pinMode(Vext,OUTPUT);
   digitalWrite(Vext, HIGH);
 }
@@ -149,8 +147,7 @@ void setup() {
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
-void loop()
-{
+void loop() {
 	if(lora_idle == true)
 	{
     smartDelay(60000);
@@ -187,14 +184,12 @@ void loop()
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
-void OnTxDone( void )
-{
+void OnTxDone( void ) {
 	Serial.println("TX done......");
 	lora_idle = true;
 }
 
-void OnTxTimeout( void )
-{
+void OnTxTimeout( void ) {
     Radio.Sleep( );
     Serial.println("TX Timeout......");
     lora_idle = true;
