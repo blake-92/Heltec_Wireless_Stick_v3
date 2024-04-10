@@ -38,7 +38,7 @@ En el menú de Arduino IDE:
 https://github.com/HelTec-Aaron-Lee/WiFi_Kit_series/releases/download/0.0.7/package_heltec_esp32_index.json
 ```
 
-![[Pasted image 20240404175021.png]]
+![](images/preferences.png)
 
 Posteriormente:
 
@@ -47,7 +47,7 @@ Posteriormente:
 - Gestor de placa
 - Buscar e instalar: Heltec ESP32 Series Dev-boards
 
-![[Pasted image 20240404175319.png]]
+![](images/board.png)
 
 ---
 
