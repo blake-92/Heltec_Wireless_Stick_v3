@@ -22,6 +22,11 @@ Enlace directo para el driver de Windows.
 - Descargar la versión CP210x Universal Windows Driver
 
 ---
+### PINOUT
+
+![](images/pinout.png)
+
+---
 
 ### Instalación de Dependencias
 
